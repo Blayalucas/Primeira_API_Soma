@@ -25,7 +25,7 @@ def homepage():
 @app.route('/PegarVendas')
 def pegarvendas():
   tabela = pd.read_csv('arquivo.csv')
-  total_vendas = tabela['Vendas'].Sum()
+  total_vendas = tabela['Vendas'].sum()
   resultado_total = {'total_vendas': total_vendas}
   return jsonify(resultado_total)
 
@@ -37,4 +37,4 @@ app.run(host='0,0,0,0')
 #Baixando a Planilha CSV para o Python
 #tabela = pd.read_csv("arquivo.csv")
 # Somando a Coluna de vendas da planilha
-#Total_vendas = tabela["Vendas"].Sum()
+#Total_vendas = tabela["Vendas"].sum()
